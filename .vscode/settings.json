@@ -1,0 +1,11 @@
+{
+    "ros.distro": "melodic",
+    "python.autoComplete.extraPaths": [
+        "/home/tunchunairarko/catkin_test_2/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/tunchunairarko/catkin_test_2/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ]
+}

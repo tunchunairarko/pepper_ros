@@ -9,7 +9,8 @@
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find pepper_gazebo_plugin)/worlds/empty.world"/>
+    <!-- <arg name="world_name" value="$(find pepper_gazebo_plugin)/worlds/nao_test2.world"/> -->
+    <arg name="world_name" value="$(find pepper_gazebo_plugin)/worlds/test_zone.world"/>    
     <arg name="paused" value="false"/>
   </include>
 
@@ -20,8 +21,10 @@
   <include file="$(find pepper_control)/launch/pepper_control_trajectory_all.launch" if="$(arg launch_control_trajectory_all)"/>
 
   <!-- Spawn a robot into Gazebo -->
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
-    args="-param robot_description -urdf -x -0.0 -y 0.0 -z 0.8 -model pepper_MP" />
+  <!-- <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+    args="-param robot_description -urdf -x -0.0 -y 0.0 -z 0.8 -model pepper_MP" /> -->
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+    args="-param robot_description -urdf -x -0.0 -y 2.0 -z 0.8 -model pepper_MP" />
 
 	
 	
